@@ -1,4 +1,5 @@
 import LoginEvent from "./login.event";
+import RegisterEvent from "./register.event";
 
 const formElement = document.querySelector("form");
 
@@ -8,9 +9,11 @@ formElement.addEventListener("submit", () => {
   const dataForm = {
     email: " ", // lấy từ form
     password: "", // lấy từ form
+    repeatPassword: "",
+    username: "",
   };
 
-  const loginEvent = new LoginEvent();
+  const loginEvent = new RegisterEvent();
 
-  loginEvent.onLogin(dataForm);
+  loginEvent.onRegister(dataForm);
 });
